@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+
+  --radius: 0.75rem;
+}
+
+:root {
+  /* Design Deep Navy Theme */
+  --background: #020c1b;
+  /* Deepest Navy */
+  --foreground: #ccd6f6;
+  /* Lightest Slate */
+
+  --primary: #0ea5e9;
+  /* Sky 500 - Bright Blue from buttons */
+  --primary-foreground: #ffffff;
+
+  --secondary: #112240;
+  /* Light Navy for cards */
+  --secondary-foreground: #8892b0;
+  /* Slate */
+
+  --accent: #64ffda;
+  /* Cyan accent for small details */
+  --accent-foreground: #020c1b;
+
+  --muted: #233554;
+  --muted-foreground: #8892b0;
+
+  --card: #0a192f;
+  /* Dark Navy */
+  --card-foreground: #ccd6f6;
+
+  --border: #1e293b;
+  --input: #1e293b;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.glass-nav {
+  background: rgba(2, 12, 27, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #0ea5e9, #64ffda);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
