@@ -30,7 +30,7 @@ const certificates = [
 
 export function Certificates() {
     return (
-        <section id="certificates" className="py-20 relative bg-[#0a192f]/30">
+        <section id="certificates" className="py-20 relative bg-muted/20">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

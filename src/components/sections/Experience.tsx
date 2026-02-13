@@ -53,7 +53,7 @@ export function Experience() {
                     className="text-center mb-12"
                 >
                     <h2 className="text-3xl md:text-5xl font-bold mb-6">
-                        Experience & <span className="text-primary">Education</span>
+                        Experience & <span className="text-primary text-gradient">Education</span>
                     </h2>
                     <div className="h-1 w-24 bg-gradient-to-r from-primary to-accent mx-auto rounded-full" />
                 </motion.div>
