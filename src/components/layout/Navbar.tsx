@@ -94,7 +94,7 @@ export function Navbar() {
                                     {link.name}
                                 </Link>
                             ))}
-                            <div className="pt-4 mt-2 border-t border-white/5 px-4">
+                            {/* <div className="pt-4 mt-2 border-t border-white/5 px-4">
                                 <a
                                     href="/cv.pdf"
                                     target="_blank"
@@ -102,7 +102,7 @@ export function Navbar() {
                                 >
                                     Download Resume
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </motion.div>
                 )}
