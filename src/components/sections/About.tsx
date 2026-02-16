@@ -17,7 +17,7 @@ const stats = [
 
 const values = [
     "Clean & Maintainable Code",
-    "User-Centered Developmen",
+    "User-Centered Development",
     "Performance Optimization",
     "Team Collaboration ",
     "Continuous learning",
