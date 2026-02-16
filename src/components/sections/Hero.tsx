@@ -50,7 +50,7 @@ export function Hero() {
                             transition={{ delay: 0.4 }}
                             className="text-muted-foreground text-lg mb-8 max-w-lg leading-relaxed"
                         >
-                            I&apos;m Jayani Srimali, a final year IT undergraduate at SLIIT specializing in Software Engineering.
+                            I&apos;m Jayani Srimali, a final year IT undergraduate at SLIIT specializing in Information Technology.
                             I thrive on turning complex problems into intuitive, visually polished interfaces that meet functional goals.
                         </motion.p>
 

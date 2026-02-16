@@ -38,7 +38,7 @@ const certificates = [
         issuer: "HackerRank",
         date: "Dec 2023",
         description: "Credentials ID: 8F8B86C34382. Verified skills in writing complex SQL queries, joining tables, and database management with Microsoft SQL Server.",
-        image: "/images/hackerrank.png",
+        image: "/images/HackerRank.png",
         tags: ["SQL", "Database", "Microsoft SQL Server"],
         link: "https://www.hackerrank.com/certificates/8f8b86c34382"
     },

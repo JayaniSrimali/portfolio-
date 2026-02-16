@@ -137,7 +137,8 @@ export function About() {
                         <div>
                             <h3 className="text-xl font-bold mb-4">Short Bio</h3>
                             <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                                I&apos;m a Full Stack-focused IT undergraduate specializing in Software Engineering. I expertise in translating complex requirements into clean, maintainable, and high-performance software solutions. With experience across frontend, backend, and database systems, I strive to create seamless, intuitive, and reliable digital experiences.
+                                I&apos;m a Full Stack-focused IT undergraduate specializing in Information Technology
+                                . I expertise in translating complex requirements into clean, maintainable, and high-performance software solutions. With experience across frontend, backend, and database systems, I strive to create seamless, intuitive, and reliable digital experiences.
                             </p>
                             <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                                 <li className="flex gap-2">
