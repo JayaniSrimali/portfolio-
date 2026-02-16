@@ -83,7 +83,7 @@ export function About() {
                         About <span className="text-primary">Me</span>
                     </h2>
                     <p className="max-w-3xl mx-auto text-muted-foreground text-lg mb-8 leading-relaxed">
-                        I&apos;m Fourth-year Computing undergraduate and aspiring Full Stack Developer, passionate about building scalable web applications, solving complex problems, and delivering clean, user-centered digital solutions.
+                        I&apos;m a final-year IT undergraduate at SLIIT and aspiring Full Stack Developer, passionate about building scalable web applications, solving complex problems, and delivering clean, user-centered digital solutions.
                     </p>
 
                     {/* Tags for Header */}
@@ -137,7 +137,7 @@ export function About() {
                         <div>
                             <h3 className="text-xl font-bold mb-4">Short Bio</h3>
                             <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
-                                I&apos;m a Full Stack-focused computing undergraduate passionate about building efficient, scalable, and user-centered web applications. I specialize in translating complex requirements into clean, maintainable, and high-performance software solutions that deliver real value to users and businesses. With experience across frontend, backend, and database systems, I strive to create seamless, intuitive, and reliable digital experiences.
+                                I&apos;m a Full Stack-focused IT undergraduate specializing in Software Engineering. I expertise in translating complex requirements into clean, maintainable, and high-performance software solutions. With experience across frontend, backend, and database systems, I strive to create seamless, intuitive, and reliable digital experiences.
                             </p>
                             <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                                 <li className="flex gap-2">
