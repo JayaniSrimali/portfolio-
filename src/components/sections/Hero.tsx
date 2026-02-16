@@ -135,9 +135,9 @@ export function Hero() {
                                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent group-hover:opacity-0 transition-opacity duration-500" />
                                 {/* Placeholder for actual image - Using a professional looking placeholder */}
                                 <img
-                                    src="/images/Profile.png"
+                                    src="/images/image.png"
                                     alt="Jayani Srimali"
-                                    className="w-full h-full  transition-transform duration-500 group-hover:scale-110"
+                                    className="w-full h-full object-contain  transition-transform duration-500 group-hover:scale-110"
                                 />
                             </div>
 
