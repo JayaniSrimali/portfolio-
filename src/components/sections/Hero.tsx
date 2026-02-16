@@ -62,9 +62,9 @@ export function Hero() {
                             className="flex gap-4 mb-8"
                         >
                             {[
-                                { icon: Linkedin, href: "#" },
-                                { icon: Github, href: "#" },
-                                { icon: Instagram, href: "#" },
+                                { icon: Linkedin, href: "https://www.linkedin.com/in/jayani-srimali-15025b2a5" },
+                                { icon: Github, href: "https://github.com/JayaniSrimali" },
+                                { icon: Instagram, href: "https://www.instagram.com/jayani_srimali?igsh=MXh0Z3gxZjdlNjZwMg%3D%3D&utm_source=qr" },
                                 { icon: Twitter, href: "#" },
                             ].map((social, idx) => (
                                 <Link
@@ -83,10 +83,14 @@ export function Hero() {
                             transition={{ delay: 0.6 }}
                             className="flex flex-wrap gap-4 mb-12"
                         >
-                            <Link href="/cv.pdf" target="_blank" className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all">
+                            <a
+                                href="/images/Jayani Srimali .pdf"
+                                download="Jayani_Srimali_CV.pdf"
+                                className="flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary to-blue-600 text-white rounded-lg font-bold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:scale-105 transition-all"
+                            >
                                 <Download className="w-5 h-5" />
                                 Download CV
-                            </Link>
+                            </a>
 
                             <Link href="#contact" className="flex items-center gap-2 px-8 py-4 bg-transparent border border-white/20 text-white hover:bg-white/5 transition-all rounded-lg font-bold hover:border-white/40">
                                 <Mail className="w-5 h-5" />
@@ -131,9 +135,9 @@ export function Hero() {
                                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent group-hover:opacity-0 transition-opacity duration-500" />
                                 {/* Placeholder for actual image - Using a professional looking placeholder */}
                                 <img
-                                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2576&auto=format&fit=crop"
+                                    src="/images/Profile.png"
                                     alt="Jayani Srimali"
-                                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    className="w-full h-full  transition-transform duration-500 group-hover:scale-110"
                                 />
                             </div>
 
