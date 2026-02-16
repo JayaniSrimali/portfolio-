@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Full Stack Developer Portfolio",
+  title: "Jayani Srimali Portfolio",
   description: "A professional portfolio showcasing full stack development projects.",
+  icons: {
+    icon: "/js-icon.svg",
+  },
 };
 
 export default function RootLayout({
