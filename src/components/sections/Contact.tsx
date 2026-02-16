@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Clock, Github, Linkedin, Globe, Send, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 export function Contact() {
     const [formState, setFormState] = useState({
@@ -16,6 +17,9 @@ export function Contact() {
         message: ""
     });
 
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [status, setStatus] = useState<{ type: 'success' | 'error' | null; message: string }>({ type: null, message: "" });
+
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormState({
             ...formState,
@@ -23,11 +27,32 @@ export function Contact() {
         });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        // Simulate form submission
-        console.log(formState);
-        alert("Message sent! (This is a demo)");
+        setIsSubmitting(true);
+        setStatus({ type: null, message: "" });
+
+        // EmailJS Configuration
+        // 1. Sign up at https://www.emailjs.com/
+        // 2. Create a new Email Service (e.g., Gmail) -> Get Service ID
+        // 3. Create a new Email Template -> Get Template ID
+        // 4. Go to Account -> API Keys -> Get Public Key
+        const serviceId = "service_l2epj69"; // Replace with your Service ID
+        const templateId = "template_9bpjz7k"; // Replace with your Template ID
+        const publicKey = "nfTKUBl-bhhepxytu"; // Replace with your Public Key
+
+
+
+        try {
+            await emailjs.send(serviceId, templateId, formState, publicKey);
+            setStatus({ type: 'success', message: "Message sent successfully! I'll get back to you soon." });
+            setFormState({ name: "", email: "", subject: "", projectType: "", budget: "", timeline: "", message: "" });
+        } catch (error) {
+            console.error("EmailJS Error:", error);
+            setStatus({ type: 'error', message: "Failed to send message. Please try again later or email me directly." });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -236,12 +261,35 @@ export function Contact() {
 
                                         <button
                                             type="submit"
-                                            className="order-1 md:order-2 px-8 py-3 bg-primary text-white font-bold rounded-lg shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:bg-primary/90 transition-all flex items-center gap-2 transform hover:-translate-y-1"
+                                            disabled={isSubmitting}
+                                            className="order-1 md:order-2 px-8 py-3 bg-primary text-white font-bold rounded-lg shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:bg-primary/90 transition-all flex items-center gap-2 transform hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
                                         >
-                                            Send message
-                                            <Send className="w-4 h-4" />
+                                            {isSubmitting ? (
+                                                <>
+                                                    <span className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></span>
+                                                    Sending...
+                                                </>
+                                            ) : (
+                                                <>
+                                                    Send message
+                                                    <Send className="w-4 h-4" />
+                                                </>
+                                            )}
                                         </button>
                                     </div>
+
+                                    {status.message && (
+                                        <motion.div
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            className={`p-4 rounded-lg text-sm font-medium ${status.type === 'success'
+                                                ? 'bg-green-500/10 text-green-500 border border-green-500/20'
+                                                : 'bg-red-500/10 text-red-500 border border-red-500/20'
+                                                }`}
+                                        >
+                                            {status.message}
+                                        </motion.div>
+                                    )}
 
                                 </form>
                             </div>
